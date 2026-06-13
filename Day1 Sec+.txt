@@ -1,0 +1,63 @@
+http://socir.rivanit.com/otrs/customer.pl
+
+admin
+C1sc0123
+
+
+Day 1:
+Kali Linux
+Incident Response
+
+CMD
+git clone https://github.com/rivancorp/SECplus701 (Download github files from github)
+
+
+certutil -hashfile DAY1-May5-SirRob.txt sha256
+
+
+
+Download kali linux with hash code
+
+
+THr TCP Three-way handshake:
+Hacker/client				victim/server
+----------------------SYN =x ------------------->
+<---------------------SYN /ACK x+1,y=1
+----------------------ACK ---------------------->
+
+
+PS C:\Users\Administrator> cd\
+PS C:\> netstat -ano | findstr :23
+
+
+Task 7: Home lab for 
+
+---- BEGIN SSH2 PUBLIC KEY ----
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDO6iq/X7zQfNqXq+KpFaPVD1lhYb+RE3wT
+9KB7XJjFVzkAzupdj0n7vARwIB7AAPVyjniSlsp9QqH0o5XlG8RPKaas07s/kXsW
+aTj1dQUgMuvZkVEmuJ7pfIvQKahvAaZIo6tMD/SwkqyUlRQWsxOPzGWSR/M/Nx8/
+PcuTN0WAbVzHWZlwBkdy4pM2MYuRF4cKnEnbYE2OoDZzhlUh/5CeX7FeSobozqbJ
+0vuPKr9aVFve8pliZ/bifhYkiFuDGhWKHVY7JnYlDPZOFACuhdyjzmod/1ASrCfn
+kf/Iwic9W1OnHfMoQ4IHKulq7oHzder+kHXQSY/YxNMqnGf5Vglf
+---- END SSH2 PUBLIC KEY ----
+-----------------------------------------------
+
+config t
+NO ip access-list standard NOPORNFAP
+ip access-list standard NOPORNFAP
+DENY 66.254.0.0 0.0.255.255
+DENY 104.21.0.0 0.0.255.255
+DENY 68.235.0.0 0.0.255.255
+DENY 104.17.0.0 0.0.255.255
+DENY 88.208.0.0 0.0.255.255
+DENY 208.77.0.0 0.0.255.255
+DENY 172.67.0.0 0.0.255.255
+Permit Any
+Int Gi 1
+ ip access-group NOPORNFAP in
+end
+----------------------------------
+
+Install wireshark
+Wireshark - loob firewall
+Secure crt
