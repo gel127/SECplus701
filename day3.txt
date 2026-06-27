@@ -1,0 +1,57 @@
+en
+conf t
+int g1
+ip add dhcp
+no shut 
+end
+sh ip int brief
+
+conf t
+logging on 
+logging host 208.8.8.133 transport udp port 9001
+logging trap informational
+end
+
+conf t
+login on-failure log
+login on-success log
+end
+
+en
+conf t
+access-list 100 deny ip any host 208.8.8.170
+access-list 100 permit ip any any
+int g1
+ip access-group 100 in
+
+pang ayos:
+en
+conf t
+int g1
+no ip access-group 100 in
+end
+
+en
+config t
+NO ip access-list standard NOPORN
+ip access-list standard NOPORN
+DENY 66.254.0.0 0.0.255.255  log
+deny 161.49.0.0 0.0.255.255  log
+Permit Any
+Int Gi 1
+ ip access-group NOPORN in
+end
+
+FW1k/firewall1k csr1000v SNMPV2 CONFIG
+#snmpv3
+conf t
+access-list 10 permit 208.8.8.170
+snmp-server community public RO 10
+end
+
+#snmpv3
+conf t
+snmp-server group zabbix v3 priv
+snmp-server user admin zabbix v3 auth sha C1sc0123 priv aes 128 C1sc0123
+end
+
